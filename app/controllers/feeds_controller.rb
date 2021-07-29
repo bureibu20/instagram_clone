@@ -4,10 +4,12 @@ class FeedsController < ApplicationController
   # GET /feeds or /feeds.json
   def index
     @feeds = Feed.all
+    
   end
 
   # GET /feeds/1 or /feeds/1.json
   def show
+    
   end
 
   # GET /feeds/new

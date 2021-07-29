@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+    <ul>
+      <li><a href="#">Facebook Clone</a></li>
+    </ul>
+    </header>
+    <div class="container">
+    <h1 class="title">Bootstrap</h1>       
+    <article class="row">
+      <div class="contents col-md-12">
+        <ul class="row">
+          <li class="col-sm-6 col-md-3">contents1</li>
+          <li class="col-sm-6 col-md-3">contents2</li>
+          <li class="col-sm-6 col-md-3">contents3</li>
+          <li class="col-sm-6 col-md-3">contents4</li>
+        </ul>
+      </div>
+    </article>
+    </div>
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
@@ -22,5 +40,9 @@
       <%= link_to "Login", new_session_path %>
     <% end %>
     <%= yield %>
+    <footer>
+      <p>運営会社Facebook株式会社</p>
+      <p>© 2015-2016 Facebook Corp.</p>
+    </footer>
   </body>
 </html>
