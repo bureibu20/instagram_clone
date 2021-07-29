@@ -12,9 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image %>
+    <%= form.label :image %><br>
+    <%= form.text_area :image %><br>
     <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %>
     <%= form.file_field :image %>
+    
   </div>
 
   <div class="actions">
