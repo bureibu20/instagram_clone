@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %><br>
-    <%= form.text_area :image %><br>
+  <div class="field">      
+    <%= form.label :content %><br>
+    <%= form.text_area :content %><br>
     <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %><br>
     <%= form.file_field :image %>
   </div>
