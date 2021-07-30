@@ -17,6 +17,7 @@
     <% current_user.feeds.each do |feed| %>
       <tr>
         <td><%= feed.user.name %></td>
+        <td><%= feed.content %></td>
         <td><%= image_tag(feed.image.url) if feed.image && feed.image.url %></td>
         <td><%= feed.content %></td>
         <td><%= link_to '詳細画面', feed_path(feed.id) %></td>

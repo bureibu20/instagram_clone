@@ -28,6 +28,7 @@ class FeedsController < ApplicationController
 
   # GET /feeds/1/edit
   def edit
+    
   end
 
   # POST /feeds or /feeds.json
@@ -75,6 +76,6 @@ class FeedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def feed_params
-      params.require(:feed).permit(:image, :image_cache)
+      params.require(:feed).permit(:image, :image_cache, :user_id)
     end
 end
