@@ -15,12 +15,11 @@
  *= require_self
  */
 
-html {
-  
-}
-body {
+ html {
   position: relative;
   min-height: 100%;
+}
+body {
   text-align: center;
 }
 li{
@@ -73,11 +72,6 @@ footer {
   background-color:royalblue;
   width: 100%;
   margin: 0;
-  position:absolute;
-  bottom: 0;
+  /* position:absolute;
+  bottom: 0; */
 }
-
-/* .content {
-  min-height: 600px;
-
-} */
