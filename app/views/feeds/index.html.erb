@@ -1,7 +1,11 @@
-<p id="notice"><%= notice %></p>
-
+# <p id="notice"><%= notice %></p>
 <h1>Feeds</h1>
 
+<div class="text_bold"><br>
+
+<%= link_to '写真を投稿する', new_feed_path %><br>
+</div>
+<br>
 <div class="alert alert-warning" role="alert">投稿一覧</div>
 <table border="1" align="center">
   <thead>
@@ -28,8 +32,6 @@
     <% end %>
   </tbody>
 </table>
-
-<div>
-<%= link_to 'New Feed', new_feed_path %><br>
 <br>
-</div>
+
+

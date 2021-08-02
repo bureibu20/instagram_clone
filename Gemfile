@@ -16,6 +16,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener_web'
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
@@ -32,3 +33,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt'
 gem 'carrierwave'
 gem 'mimemagic', '0.3.7'
+
+gem 'rexml', '~> 3.2', '>= 3.2.4'
