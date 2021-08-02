@@ -33,5 +33,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt'
 gem 'carrierwave'
 gem 'mimemagic', '0.3.7'
-
+gem 'faker'
 gem 'rexml', '~> 3.2', '>= 3.2.4'
