@@ -56,7 +56,7 @@ ul{
 }
 header{
   height: 50px;
-  background-color:royalblue;
+  background-color:darkorchid;
   color: white;
   font-size: 40px;
   width: 100%;
@@ -69,7 +69,7 @@ header a {
 footer {
   color: white;
   height: 50px;
-  background-color:royalblue;
+  background-color:darkorchid;
   width: 100%;
   margin: 0;
   /* position:absolute;
