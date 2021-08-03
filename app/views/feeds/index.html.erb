@@ -8,10 +8,9 @@
 
 <h1>Feeds</h1>
 
-<div class="text_bold"><br>
 
-<%= link_to '写真を投稿する', new_feed_path %><br>
-</div>
+<%= link_to '写真を投稿する', new_feed_path, class: "btn btn-success"%><br>
+
 <br>
 <div class="alert alert-warning" role="alert">投稿一覧</div>
 <table border="1" align="center">
@@ -32,9 +31,9 @@
         <td><%= feed.user.name %></td>
         <td class="img"><%= image_tag(feed.image.url) if feed.image.present? %></td>
         <td><%= feed.content %></td>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', feed, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_feed_path(feed), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
