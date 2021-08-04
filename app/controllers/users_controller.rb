@@ -13,6 +13,10 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @feeds = @user.feeds
+
+    favorites = Favorite.where(user_id: current_user.id).pluck(:feed_id)
+    @favorite_list = Feed.find(favorites)
   end
   private
   def user_params
