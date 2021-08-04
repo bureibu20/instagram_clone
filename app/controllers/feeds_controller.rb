@@ -1,18 +1,15 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: %i[ show edit update destroy ]
 
-  # GET /feeds or /feeds.json
   def index
     @feeds = Feed.all
     
   end
 
-  # GET /feeds/1 or /feeds/1.json
   def show
     @favorite = current_user.favorites.find_by(feed_id: @feed.id)
   end
 
-  # GET /feeds/new
   def new
     if params[:back]
       @feed = Feed.new(feed_params)
@@ -26,12 +23,10 @@ class FeedsController < ApplicationController
     render :new if @feed.invalid?
   end
 
-  # GET /feeds/1/edit
   def edit
     
   end
 
-  # POST /feeds or /feeds.json
   def create
     @feed = current_user.feeds.build(feed_params)
 
@@ -47,7 +42,6 @@ class FeedsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /feeds/1 or /feeds/1.json
   def update
     respond_to do |format|
       if @feed.update(feed_params)
@@ -60,7 +54,6 @@ class FeedsController < ApplicationController
     end
   end
 
-  # DELETE /feeds/1 or /feeds/1.json
   def destroy
     @feed.destroy
     respond_to do |format|
