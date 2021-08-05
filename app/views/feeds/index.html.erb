@@ -32,8 +32,13 @@
         <td class="img"><%= image_tag(feed.image.url) if feed.image.present? %></td>
         <td><%= feed.content %></td>
         <td><%= link_to 'Show', feed, class: "btn btn-primary" %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed), class: "btn btn-warning" %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <% if feed.user == current_user %>
+          <td><%= link_to 'Edit', edit_feed_path(feed), class: "btn btn-warning" %></td>
+          <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <% else %>
+          <td></td>
+          <td></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

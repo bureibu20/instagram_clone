@@ -28,7 +28,7 @@
         <td><%= image_tag(feed.image.url) if feed.image && feed.image.url %></td>
         <td><%= link_to '詳細画面', feed_path(feed.id), class: "btn btn-primary" %></td>
         <td><%= link_to '編集する', edit_feed_path(feed.id), class: "btn btn-warning" %></td>
-        <td><%= link_to '削除する', feed_path(feed.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn btn-danger" %></td>
+        <td><%= link_to '削除する', feed_path(feed.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn btn-danger" %></td> 
       </tr>
     <% end %>
   </tbody>
