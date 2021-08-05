@@ -6,34 +6,38 @@
   <%= image_tag @user.image.url %>
 <% end %>
 
+<% 
+=begin %>
+# <h1><%= @user.name %>の投稿一覧</h1>
+# <table border="1" align="center">
+#   <thead>
+#     <tr>
+#       <th>投稿者</th>
+#       <th>内容</th>
+#       <th>投稿写真</th>
+#       <th>詳細</th>
+#       <th>編集</th>
+#       <th>削除</th>
+#     </tr>
+#   </thead>
+#   <tbody>
+#     <% current_user.feeds.each do |feed| %>
+#       <tr>
+#         <td><%= feed.user.name %></td>
+#         <td><%= feed.content %></td>
+#         <td><%= image_tag(feed.image.url) if feed.image && feed.image.url %></td>
+#         <td><%= link_to '詳細画面', feed_path(feed.id), class: "btn btn-primary" %></td>
+#         <td><%= link_to '編集する', edit_feed_path(feed.id), class: "btn btn-warning" %></td>
+#         <td><%= link_to '削除する', feed_path(feed.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn btn-danger" %></td> 
+#       </tr>
+#     <% end %>
+#   </tbody>
+# </table>
+# <br>
+<% 
+=end %>
 
 
-<h1><%= @user.name %>の投稿一覧</h1>
-<table border="1" align="center">
-  <thead>
-    <tr>
-      <th>投稿者</th>
-      <th>内容</th>
-      <th>投稿写真</th>
-      <th>詳細</th>
-      <th>編集</th>
-      <th>削除</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% current_user.feeds.each do |feed| %>
-      <tr>
-        <td><%= feed.user.name %></td>
-        <td><%= feed.content %></td>
-        <td><%= image_tag(feed.image.url) if feed.image && feed.image.url %></td>
-        <td><%= link_to '詳細画面', feed_path(feed.id), class: "btn btn-primary" %></td>
-        <td><%= link_to '編集する', edit_feed_path(feed.id), class: "btn btn-warning" %></td>
-        <td><%= link_to '削除する', feed_path(feed.id), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn btn-danger" %></td> 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
 <h4>お気に入りした写真一覧</h4>
 <table border="1" align="center">
   <thead>
