@@ -20,4 +20,3 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import 'stylesheets/application'
