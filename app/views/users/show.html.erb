@@ -1,11 +1,12 @@
+<h4><%= link_to 'ユーザー情報を編集する', edit_user_path(@user), class: "btn btn-warning" %></h4>
+<%= link_to '写真を投稿する', new_feed_path, class: "btn btn-success"%><br>
 <h1><%= @user.name %>のページ</h1>
 <p>メールアドレス: <%= @user.email %></p>
-<p>
-  <strong>Image:</strong><br>
-  <%= image_tag @user.image.url if @user.image.present? %>
-</p>
+<% if @user.image? %>
+  <%= image_tag @user.image.url %>
+<% end %>
 
-<%= link_to '写真を投稿する', new_feed_path, class: "btn btn-success"%><br>
+
 
 <h1><%= @user.name %>の投稿一覧</h1>
 <table border="1" align="center">

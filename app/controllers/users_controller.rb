@@ -11,6 +11,10 @@ class UsersController < ApplicationController
       render :new
     end
   end
+  def confirm
+    @user = current_user.users.build(user_params)
+    render :new if @user.invalid?
+  end
   def edit
     @user = User.find(params[:id])
   end
